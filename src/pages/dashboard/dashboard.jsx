@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import chartDatax from '../../static/chartData';
 import tableData from '../../static/dashbaord-table';
 import './dashboard.scss';
@@ -6,11 +6,14 @@ import './dashboard.scss';
 
 
 const Dashboard = () => {
+    const [rowShown, setRowShown] = useState(tableData.length);
+    const [searchValue, setSearchValue] = useState('');
+
     return ( 
         <div className="dashboard">
             <h3 id="title">Dashboard</h3>
             <div className="flex-card">
-                {chartDatax.map(({title, overallPercent, icon, sTitle, keys}, index) => {
+                {chartDatax.map(({title, overallPercent, icon, sTitle,chart, keys}, index) => {
                 return (
                     <div className="item" key={index}>
                         <img src={icon} alt="icon" srcset="" id="icn" />
@@ -29,6 +32,11 @@ const Dashboard = () => {
                                    
                                )
                            })}
+                       </div>
+                       <div className="pie-chart">
+                           <div className="pie-content">
+                               <img src={chart} alt="" srcset="" />
+                           </div>
                        </div>
                        <div className="keuys">
                            {keys.map(({name, color}, index) => {
@@ -63,18 +71,19 @@ const Dashboard = () => {
                     <div className="show">
                         <span>Show</span>
                         <div className="select">
-                            <select id="list">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select onChange={e => setRowShown(e.target.value)} id="list">
+                                <option selected value={tableData.length}>All</option>
+                                {tableData.map((t, index) =>{
+                                    return (
+                                        <option key={index} value={index + 1}>{index + 1}</option>
+                                    )
+                                })}
                             </select>
                         </div>
                         <span>entries</span>
                     </div>
                     <div className="search">
-                        <input type="text" placeholder="Search" /><i className="fas fa-search"></i>
+                        <input value={searchValue} onChange={e => setSearchValue(e.target.value)} type="text" placeholder="Search" /><i className="fas fa-search"></i>
                     </div>
                 </div>
                 <div className="table">
@@ -88,13 +97,13 @@ const Dashboard = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {tableData.map(({Entities, Lincense, Agency, FieldOffice}, index) => {
+                    {tableData.slice(0, rowShown).filter(data => data.entities.toLowerCase().includes(searchValue.toLowerCase())).map(({entities, lincense, agency, fieldOffice}, index) => {
                         return (
                             <tr key={index}>
-                                <td>{Entities}</td>
-                                <td>{Lincense}</td>
-                                <td>{Agency}</td>
-                                <td>{FieldOffice}</td>
+                                <td>{entities}</td>
+                                <td>{lincense}</td>
+                                <td>{agency}</td>
+                                <td>{fieldOffice}</td>
                             </tr>
                         )
                     })}

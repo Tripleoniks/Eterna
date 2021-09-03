@@ -1,27 +1,45 @@
 const tableData = [
     {
-        Entities: "Eterna Ikoyi Road",
-        Lincense: "Weight & Measure Certificate",
-        Agency: "Department of Weight & Measures",
-        FieldOffice: "Lagos Office"
+        entities: "Eterna Ikoyi Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Lagos Office"
     },
     {
-        Entities: "Eterna Lekki Road",
-        Lincense: "Weight & Measure Certificate",
-        Agency: "Department of Weight & Measures",
-        FieldOffice: "Lagos Office"
+        entities: "Eterna Lekki Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Lagos Office"
     },
     {
-        Entities: "Eterna Abuja Road",
-        Lincense: "Weight & Measure Certificate",
-        Agency: "Department of Weight & Measures",
-        FieldOffice: "Abuja Office"
+        entities: "Eterna Abuja Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Abuja Office"
     },
     {
-        Entities: "Eterna Ikeja Road",
-        Lincense: "Weight & Measure Certificate",
-        Agency: "Department of Weight & Measures",
-        FieldOffice: "Lagos Office"
+        entities: "Eterna Abuja Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Abuja Office"
+    },
+    {
+        entities: "Eterna Abuja Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Abuja Office"
+    },
+    {
+        entities: "Eterna Abuja Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Abuja Office"
+    },
+    {
+        entities: "Eterna Ikeja Road",
+        lincense: "Weight & Measure Certificate",
+        agency: "Department of Weight & Measures",
+        fieldOffice: "Lagos Office"
     }
 
 ]

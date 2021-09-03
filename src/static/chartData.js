@@ -1,11 +1,13 @@
 import img1 from  "../images/home-icon.svg";
 import img2 from  "../images/check-icon.svg";
 import img3 from  "../images/settings-icon.svg";
+import pie from "../images/pie-chart.svg";
 const chartDatax = [
     {
        overallPercent: '100%',
        title: "ENTITY COMPLIANCE",
        icon: img1,
+       chart: pie,
        sTitle: [
            {
              title: "Entities",
@@ -38,11 +40,13 @@ const chartDatax = [
             color: "#F9C636"
         }
        ]
+       
     },
     {
        overallPercent: "38%",
        title: "LICENSE COMPLIACE",
        icon: img2,
+       chart: pie,
        sTitle: [
            {
              title: "Total Expected",
@@ -80,6 +84,7 @@ const chartDatax = [
        overallPercent: "64%",
        title: "PROCESSING STAGE",
        icon: img3,
+       chart: pie,
        sTitle: [
            {
              title: "Start Process",
@@ -117,6 +122,7 @@ const chartDatax = [
        overallPercent: 234,
        title: "STAKEHOLDER COUNT",
        icon: img2,
+       chart: pie,
        sTitle: [
            {
              title: "KRI",
