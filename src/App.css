@@ -9,10 +9,10 @@
 }
 
 .app .pg {
-
+   display: flex;
 }
 
 .app .pg .right {
-   margin-left: 220px;
-   background-color: gray;
+   /* margin-left: 240px; */
+   /* background-color: gray; */
 }

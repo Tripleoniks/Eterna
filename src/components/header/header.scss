@@ -1,4 +1,13 @@
 .header {
   background-color: #006e33;
   height: 70px;
+
+  .logo {
+    .img {
+      height: 50px;
+      width: 100px;
+      background-color: #fff;
+      // margin: 0 auto;
+    }
+  }
 }

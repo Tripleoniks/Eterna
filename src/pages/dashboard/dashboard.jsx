@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import CustomButton from '../../components/customButton/customButton';
 import chartDatax from '../../static/chartData';
 import tableData from '../../static/dashbaord-table';
 import './dashboard.scss';
@@ -11,14 +12,6 @@ const Dashboard = () => {
 
     return ( 
         <div className="dashboard">
-<<<<<<< HEAD
-            <h1>DASHBOARD PAGE</h1>
-            {chartDatax.map(({title, id}) => {
-                return (
-                    <div className="item" key={id}>
-                       <p className="title">{title}</p>
-
-=======
             <h3 id="title">Dashboard</h3>
             <div className="flex-card">
                 {chartDatax.map(({title, overallPercent, icon, sTitle,chart, keys}, index) => {
@@ -53,7 +46,6 @@ const Dashboard = () => {
                                )
                            })}
                        </div>
->>>>>>> 675062ac0ff93ef3ef57154926b02990007178b0
                     </div>
                 )
             })}
