@@ -1,0 +1,198 @@
+@import "../../scss/./default";
+@import "../../scss/./color";
+.dashboard {
+  background-color: $secondary-color;
+
+  #title {
+    margin: 2rem 0rem 2rem 7rem;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .flex-card {
+    display: flex;
+    max-width: 95%;
+    margin: 1rem auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .item {
+      position: relative;
+      background-color: $secondary-color;
+      margin: 0.4rem;
+      padding: 1rem;
+      height: 472px;
+      flex: 0 1 max($numbers: 20%);
+      border-radius: 12px;
+      box-shadow: -4px -4px 4px rgba(0, 110, 51, 0.12),
+        4px 4px 4px rgba(0, 110, 51, 0.12);
+      #icn {
+        position: absolute;
+        top: 8%;
+        right: 8%;
+      }
+      .perct {
+        width: 100%;
+        margin-top: 1rem;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+      .title {
+        @extend .perct;
+        position: relative;
+        width: 50%;
+        margin: 0;
+      }
+      .subs {
+        margin: 2rem 0;
+        font-weight: bold;
+        font-size: 0.8rem;
+        .info {
+          display: flex;
+          p {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+    .pie-chart {
+      .pie-content {
+        margin: 2rem auto;
+      }
+    }
+
+    .keuys {
+      font-size: 0.8rem;
+      i {
+        margin: 0.2rem 0.3rem;
+      }
+    }
+  }
+}
+
+.bottom {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 80%;
+  border-radius: 12px;
+  box-shadow: -4px -4px 4px rgba(0, 110, 51, 0.12),
+    4px 4px 4px rgba(0, 110, 51, 0.12);
+  h3 {
+    margin: 1rem 0;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .btn-item button {
+    margin: 1rem;
+    padding: 0.8rem 1rem;
+    width: 7.5rem;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .btn-item #btn1st {
+    color: #000;
+    border: 1px solid #000;
+  }
+  .show-search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .show {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0.5rem 0.5rem;
+      width: 25%;
+      font-size: 0.8rem;
+      #list {
+        padding: 0.7rem 1.5rem;
+        border: 0.5px solid rgba(0, 0, 0, 0.7);
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+    }
+
+    .search {
+      input {
+        position: relative;
+        padding: 0.7rem;
+        width: 320px;
+        border: 0.5px solid rgba(0, 0, 0, 0.7);
+        border-radius: 4px;
+        outline: none;
+      }
+      i {
+        position: absolute;
+        transform: translate(-25px, 12px);
+      }
+    }
+  }
+
+  table.blueTable {
+    margin: 1rem auto;
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.blueTable td,
+  table.blueTable th {
+    padding: 10px 5px;
+  }
+  table.blueTable tbody td {
+    font-size: 0.8rem;
+  }
+
+  table.blueTable tr:nth-child(odd) {
+    background: #e3efe9;
+  }
+
+  table.blueTable thead th {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .foot {
+    position: relative;
+    text-align: right;
+    .foot-item {
+      display: inline-block;
+      width: 400px;
+      margin-top: 2rem;
+      text-align: center;
+      box-shadow: -4px -4px 4px rgba(0, 110, 51, 0.12),
+        4px 4px 4px rgba(0, 110, 51, 0.12);
+      border-radius: 4px;
+      button {
+        border: none;
+        margin: 0 0.3rem;
+        padding: 0.5rem;
+        background-color: inherit;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transition: 0.25s ease-in-out;
+      }
+      :hover {
+        background-color: $primary-color;
+        padding: 0.4rem;
+        border-radius: 2px;
+        color: #fff;
+      }
+    }
+    span {
+      margin: 0.5rem;
+    }
+    label {
+      font-size: 0.7rem;
+    }
+  }
+}
