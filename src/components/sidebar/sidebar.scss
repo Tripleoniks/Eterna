@@ -38,6 +38,18 @@
   .nav {
     margin-top: 20px;
 
+    .opt1 {
+      margin-left: 70px;
+      color: #fff;
+      font-size: 13px;
+      list-style: none;
+      // font-weight: 500;
+
+      li {
+        margin-bottom: 7px;
+      }
+    }
+
     .active {
       background-color: #fff;
       border-radius: 20px 0 0 20px;
@@ -48,7 +60,7 @@
       padding: 12px 20px 12px 18px;
       display: block;
       margin-left: 7px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       transition: 150ms ease;
       text-decoration: none;
       color: #fff;
@@ -57,6 +69,9 @@
 
       i {
         margin-right: 12px;
+      }
+      .fa-chart-bar {
+        transform: rotate(-90deg);
       }
     }
   }

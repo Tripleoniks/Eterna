@@ -19,16 +19,39 @@ const SideBar = () => {
                 <NavLink className="nav-item" activeClassName="active" exact to="/reports"><i className="fas fa-chart-bar"></i>Report</NavLink>
                 <NavLink className="nav-item" activeClassName="active" exact to="/entities"><i className="fas fa-suitcase"></i>Add / Remove Entities</NavLink>
                 <NavLink onClick={() => setExpanse1(prev => !prev)} className="nav-item" activeClassName="active" exact to="/agencies"><i className="fas fa-coins"></i>Add / Remove Agencies</NavLink>
+                <NavLink onClick={() => setExpanse1(prev => !prev)} className="nav-item" activeClassName="active" exact to="/region"><i class="fas fa-map-marker-alt"></i>Add / Remove Region</NavLink>
                 <>
                 <NavLink className="nav-item" activeClassName="active" exact to="/stakeholders"><i className="far fa-id-badge"></i>Stakeholders</NavLink>
-                {expanse1 && <div>Hello</div>}
+                <ul className="opt1">
+                    <li>Add Stakeholders</li>
+                    <li>Stakeholder Activities</li>
+                    <li>Upload eCards</li>
+                    <li>Logged Activities</li>
+                </ul>
                 </>
-                <NavLink className="nav-item" activeClassName="active" exact to="/agencies2"><i className="fas fa-coins"></i>Manage Licenses/Permits</NavLink>
-                <NavLink className="nav-item" activeClassName="active" exact to="/agencies3"><i className="fas fa-coins"></i>Account Settings</NavLink>
-                <NavLink className="nav-item" activeClassName="active" exact to="/agencies4"><i className="fas fa-coins"></i>Document Manager</NavLink>
-                <NavLink className="nav-item" activeClassName="active" exact to="/agencies5"><i className="fas fa-coins"></i>Manage News & Events</NavLink>
-                <NavLink className="nav-item" activeClassName="active" exact to="/agencies6"><i className="fas fa-lock"></i>Change Password</NavLink>
-                <NavLink className="nav-item" activeClassName="active" exact to="/agencies7"><i className="fas fa-user-circle"></i>Logout</NavLink>
+                <>
+                <NavLink className="nav-item" activeClassName="active" exact to="/licenses"><i className="fas fa-layer-group"></i>Manage Licenses/Permits</NavLink>
+                <ul className="opt1">
+                    <li>License</li>
+                    <li>Track & Update License</li>
+                </ul>
+                </>
+                <>
+                <NavLink className="nav-item" activeClassName="active" exact to="/settings"><i className="fas fa-chart-bar"></i>Account Settings</NavLink>
+                <ul className="opt1">
+                    <li>Add User</li>
+                </ul>
+                </> 
+                <NavLink className="nav-item" activeClassName="active" exact to="/documents"><i className="fas fa-archive"></i>Document Manager</NavLink>
+                <>
+                <NavLink className="nav-item" activeClassName="active" exact to="/news"><i className="fas fa-book"></i>Manage News & Events</NavLink>
+                <ul className="opt1">
+                    <li>News</li>
+                    <li>Events</li>
+                </ul>
+                </>
+                <NavLink className="nav-item" activeClassName="active" exact to="/change-password"><i className="fas fa-lock"></i>Change Password</NavLink>
+                <NavLink className="nav-item" activeClassName="active" exact to="/logout"><i className="fas fa-user-circle"></i>Logout</NavLink>
             </div>
             
         </div>

@@ -11,12 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
+        
         <div className="pg">
           <div className="left">
             <SideBar />
           </div>
           <div className="right">
+            <Header />
             <Switch>
               <Route exact path="/" component={Dashboard} />
               <Route exact path="/regulator" component={Regulator} />
