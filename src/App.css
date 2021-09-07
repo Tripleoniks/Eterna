@@ -13,6 +13,7 @@
 }
 
 .app .pg .right {
-   /* margin-left: 240px; */
+    width: 100%;
+   /* margin-left: 140px; */
    /* background-color: gray; */
 }
